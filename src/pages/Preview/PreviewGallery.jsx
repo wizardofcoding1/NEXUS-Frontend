@@ -22,6 +22,24 @@ import {
   FileText
 } from "lucide-react";
 
+
+
+import AdminDashboardImage from "../../assets/admin/admin-dashboard.png";  
+import HRManagementImage from "../../assets/admin/admin-hr.png";  
+import PayrollImage from "../../assets/admin/admin-payroll.png";  
+import AuditImage from "../../assets/admin/admin-audit.png";  
+
+import HRDashboardImage from "../../assets/hr/hr-dashboard.png";
+import EmployeeDirectoryImage from "../../assets/hr/hr-directory.png";
+import LeaveRequestsImage from "../../assets/hr/hr-leave.png";
+import ProjectImage from "../../assets/hr/hr-projects.png";
+
+import EmployeeDashboardImage from "../../assets/employee/employee-dashboard.png";
+import AttendanceImage from "../../assets/employee/employee-attandance.png";
+import PayslipsImage from "../../assets/employee/employee-payslips.png";
+import ProfileSettingsImage from "../../assets/employee/employee-profile.png";  
+
+
 // --- 0. Data Hook ---
 const useSuiteData = () => {
   return useMemo(
@@ -34,10 +52,10 @@ const useSuiteData = () => {
         color: "indigo", // Theme Color
         description: "Company-wide control, audits, payroll, and analytics.",
         pages: [
-          { name: "Admin Dashboard", icon: Activity, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=Admin+Dashboard" },
-          { name: "HR Management", icon: Users, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=HR+Management" },
-          { name: "Payroll Systems", icon: CreditCard, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=Payroll+Systems" },
-          { name: "Audit Logs", icon: FileText, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=Audit+Logs" },
+          { name: "Admin Dashboard", icon: Activity, image: AdminDashboardImage },
+          { name: "HR Management", icon: Users, image: HRManagementImage },
+          { name: "Payroll Systems", icon: CreditCard, image: PayrollImage },
+          { name: "Audit Logs", icon: FileText, image: AuditImage },
         ],
       },
       {
@@ -48,10 +66,10 @@ const useSuiteData = () => {
         color: "rose",
         description: "Daily operations: employees, projects, leaves, and attendance.",
         pages: [
-          { name: "HR Dashboard", icon: Activity, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=HR+Dashboard" },
-          { name: "Employee Directory", icon: Users, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=Employee+Directory" },
-          { name: "Leave Requests", icon: FileText, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=Leave+Requests" },
-          { name: "Performance", icon: Cpu, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=Performance" },
+          { name: "HR Dashboard", icon: Activity, image: HRDashboardImage  },
+          { name: "Employee Directory", icon: Users, image: EmployeeDirectoryImage },
+          { name: "Leave Requests", icon: FileText, image: LeaveRequestsImage },
+          { name: "Performance", icon: Cpu, image: ProjectImage },
         ],
       },
       {
@@ -62,10 +80,10 @@ const useSuiteData = () => {
         color: "emerald",
         description: "Personal attendance, payslips, projects, and profile.",
         pages: [
-          { name: "My Dashboard", icon: Activity, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=My+Dashboard" },
-          { name: "Attendance", icon: Users, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=My+Attendance" },
-          { name: "Payslips", icon: CreditCard, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=My+Payslips" },
-          { name: "Profile Settings", icon: Cpu, image: "https://via.placeholder.com/1600x900/0f172a/ffffff?text=Profile+Settings" },
+          { name: "My Dashboard", icon: Activity, image: EmployeeDashboardImage },
+          { name: "Attendance", icon: Users, image: AttendanceImage },
+          { name: "Payslips", icon: CreditCard, image: PayslipsImage },
+          { name: "Profile Settings", icon: Cpu, image: ProfileSettingsImage },
         ],
       },
     ],
