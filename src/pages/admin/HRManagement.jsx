@@ -1,10 +1,18 @@
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
+=======
+import { FiUserPlus } from "react-icons/fi";
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
 import MainLayout from "../../layouts/MainLayout";
 import { getHRs, createHR, toggleHRStatus } from "../../services/adminService";
 import { deleteEmployee } from "../../services/employeeService";
 import { toastError, toastSuccess } from "../../utils/toast";
 import ConfirmModal from "../../components/ui/ConfirmModal";
+<<<<<<< HEAD
 import LoadingOverlay from "../../components/ui/LoadingOverlay";
+=======
+import Button from "../../components/ui/Button";
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
 import useFilters from "../../hooks/useFilters";
 import useForm from "../../hooks/useForm";
 import useAsync from "../../hooks/useAsync";
@@ -12,10 +20,17 @@ import useAsync from "../../hooks/useAsync";
 const HRManagement = () => {
     const [hrs, setHrs] = useState([]);
     const [generated, setGenerated] = useState(null);
+<<<<<<< HEAD
     const [deleteOpen, setDeleteOpen] = useState(false);
     const [deleteTarget, setDeleteTarget] = useState(null);
     const [deleting, setDeleting] = useState(false);
     const [creating, setCreating] = useState(false);
+=======
+    const [creating, setCreating] = useState(false);
+    const [deleteOpen, setDeleteOpen] = useState(false);
+    const [deleteTarget, setDeleteTarget] = useState(null);
+    const [deleting, setDeleting] = useState(false);
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
     const { filters, setFilters } = useFilters({
         status: "",
         department: "",
@@ -55,6 +70,10 @@ const HRManagement = () => {
 
     const handleCreateHR = async (e) => {
         e.preventDefault();
+<<<<<<< HEAD
+=======
+        if (creating) return;
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
         setCreating(true);
         try {
             const payload = { ...form };
@@ -106,7 +125,10 @@ const HRManagement = () => {
 
     return (
         <MainLayout>
+<<<<<<< HEAD
             {creating && <LoadingOverlay label="Creating HR account..." />}
+=======
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
             <div className="max-w-[1600px] mx-auto pb-10 space-y-8">
                 <div className="flex flex-col gap-2">
                     <h1 className="text-2xl font-bold text-slate-800">HR Management</h1>
@@ -185,6 +207,7 @@ const HRManagement = () => {
                                     )}
                                 </div>
 
+<<<<<<< HEAD
                                 <button
                                     type="submit"
                                     disabled={creating}
@@ -192,6 +215,19 @@ const HRManagement = () => {
                                 >
                                     {creating ? "Creating..." : "Create HR Account"}
                                 </button>
+=======
+                                <Button
+                                    type="submit"
+                                    isLoading={creating}
+                                    loadingLabel="Creating HR..."
+                                    className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg shadow-sm transition-colors text-sm disabled:opacity-70 disabled:cursor-not-allowed"
+                                >
+                                    <span className="inline-flex items-center justify-center gap-2">
+                                        <FiUserPlus />
+                                        Create HR Account
+                                    </span>
+                                </Button>
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
                             </form>
                         </div>
                     </div>

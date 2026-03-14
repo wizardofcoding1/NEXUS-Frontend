@@ -1,8 +1,13 @@
 import React, { useState, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Float, Stars, Dodecahedron } from "@react-three/drei";
+<<<<<<< HEAD
 import { FiMail, FiArrowLeft, FiLoader, FiSend, FiHelpCircle } from "react-icons/fi";
 import { motion } from "framer-motion";
+=======
+import { motion } from "framer-motion";
+import { FiMail, FiArrowLeft, FiLoader, FiSend, FiHelpCircle } from "react-icons/fi";
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
 import { forgotPasswordApi } from "../../services/authServices";
 import { toastError, toastSuccess } from "../../utils/toast";
 
@@ -36,12 +41,16 @@ const SpaceBackground = () => {
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
   const [debugResetUrl, setDebugResetUrl] = useState("");
   const [debugError, setDebugError] = useState("");
+=======
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+<<<<<<< HEAD
     setDebugResetUrl("");
     setDebugError("");
     try {
@@ -58,6 +67,11 @@ const ForgotPassword = () => {
             ? "Password reset email is disabled."
             : res?.message || "Reset link sent."
       );
+=======
+    try {
+      const res = await forgotPasswordApi({ email });
+      toastSuccess(res?.data?.emailDisabled ? "Password reset is disabled." : res?.message || "Reset link sent.");
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
     } catch (error) {
       toastError(error?.response?.data?.message || "Failed to reset password");
     } finally {
@@ -95,6 +109,7 @@ const ForgotPassword = () => {
             </button>
           </form>
 
+<<<<<<< HEAD
           {debugResetUrl && (
             <div className="mt-4 rounded-lg border border-amber-400/20 bg-amber-400/10 p-4 text-left">
               <p className="text-xs font-bold uppercase tracking-wide text-amber-300">Development Reset Link</p>
@@ -110,6 +125,8 @@ const ForgotPassword = () => {
             </div>
           )}
 
+=======
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
           <div className="mt-6 text-center">
             <a href="/login" className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
               <FiArrowLeft /> Back to Login

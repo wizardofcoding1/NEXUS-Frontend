@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import ProtectedRoute from "./ProtectedRoute";
+<<<<<<< HEAD
 import PageTransition from "../components/animation/PageTransition";
+=======
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
 
 // Auth Pages
 import Login from "../pages/auth/Login";
@@ -110,9 +113,13 @@ const AppRoutes = () => {
                     path="/admin"
                     element={
                         <ProtectedRoute allowedRoles={["Admin"]}>
+<<<<<<< HEAD
                             <PageTransition>
                                 <AdminDashboard />
                             </PageTransition>
+=======
+                            <AdminDashboard />
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
                         </ProtectedRoute>
                     }
                 />
@@ -228,9 +235,13 @@ const AppRoutes = () => {
                     path="/hr"
                     element={
                         <ProtectedRoute allowedRoles={["HR"]}>
+<<<<<<< HEAD
                             <PageTransition>
                                 <HRDashboard />
                             </PageTransition>
+=======
+                            <HRDashboard />
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
                         </ProtectedRoute>
                     }
                 />
@@ -343,9 +354,13 @@ const AppRoutes = () => {
                         <ProtectedRoute
                             allowedRoles={["Employee", "HR", "Admin"]}
                         >
+<<<<<<< HEAD
                             <PageTransition>
                                 <EmployeeDashboard />
                             </PageTransition>
+=======
+                            <EmployeeDashboard />
+>>>>>>> e10146984f554d5728d7023b097f180da318ef21
                         </ProtectedRoute>
                     }
                 />
