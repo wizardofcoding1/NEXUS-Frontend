@@ -2,13 +2,8 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { Float, Stars, Dodecahedron } from "@react-three/drei";
-<<<<<<< HEAD
-import { FiCheckCircle, FiMail, FiLock, FiLoader } from "react-icons/fi";
-import { motion } from "framer-motion";
-=======
 import { motion } from "framer-motion";
 import { FiCheckCircle, FiMail, FiLock, FiLoader } from "react-icons/fi";
->>>>>>> e10146984f554d5728d7023b097f180da318ef21
 import { activateAccountApi } from "../../services/authServices";
 import { toastError, toastSuccess } from "../../utils/toast";
 

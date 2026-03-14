@@ -1,26 +1,9 @@
-<<<<<<< HEAD
-=======
 import { FiLoader } from "react-icons/fi";
-
->>>>>>> e10146984f554d5728d7023b097f180da318ef21
 const Button = ({
     children,
     type = "submit",
     disabled,
     isLoading,
-<<<<<<< HEAD
-    className = "",
-    ...props
-}) => {
-    return (
-        <button
-            type={type}
-            disabled={disabled || isLoading}
-            className={`inline-flex items-center justify-center gap-2 ${className}`}
-            {...props}
-        >
-            <span>{isLoading ? "Processing..." : children}</span>
-=======
     loading,
     loadingLabel = "Processing...",
     loadingIcon: LoadingIcon = FiLoader,
@@ -44,7 +27,6 @@ const Button = ({
             ) : (
                 <span>{children}</span>
             )}
->>>>>>> e10146984f554d5728d7023b097f180da318ef21
         </button>
     );
 };

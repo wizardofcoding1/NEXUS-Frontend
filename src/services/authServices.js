@@ -5,10 +5,6 @@ export const loginApi = async (credentials) => {
     return res.data;
 };
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e10146984f554d5728d7023b097f180da318ef21
 export const changePasswordApi = async (data) => {
     const res = await api.post("/auth/change-password", data);
     return res.data;
